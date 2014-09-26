@@ -12,3 +12,12 @@ deploy:
     region: eu-west-1
     local-dir: build
     skip_cleanup: true
+  - provider: s3
+    on: staging
+    access_key_id: AKIAJPDM6TIB7IL4LYOQ
+    secret_access_key:
+      secure: Oc6bD8B89w3T6PAmhWemppO3CHZsiIyHJ3T4zMa/oXGOpiB2h1nBqTlN24VNloBFo+547wCt4bXH9A/Vz9VkzrfeBNv7X8k8xBKbDv8iS9yc/Sav5vbxHzT7z6Mv/bvrmeYeDKB65A1ZAzHZiDUIbewrodg2XJLO83SMmVP4Oso=
+    bucket: staging.schuuss.com
+    region: eu-west-1
+    local-dir: build
+    skip_cleanup: true
