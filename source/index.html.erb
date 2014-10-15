@@ -38,7 +38,7 @@ description: >
   </div>
 </section>
 
-<section class="container-fluid feature">
+<section id="select-instructor" class="container-fluid feature">
   <div class="outer">
     <div class="middle">
       <div class="row">
@@ -56,9 +56,18 @@ description: >
             Fusce augue mi, scelerisque vel gravida eget, venenatis sit amet dolor. Praesent dignissim vitae ligula sed suscipit. Integer tempor egestas neque, nec pretium dui eleifend vitae.
           </p>
         </div>
-        <div class="col-md-5 col-md-pull-6">
-          <%= image_tag 'pick_your_instructor.png', class: 'img-responsive' %>
-          <%= image_tag 'pick_your_instructor.png', class: 'img-responsive' %>
+        <div class="col-md-5 col-md-pull-6 tiles-overflow">
+
+          <div class="row">
+            <div class="tiles-container-outer">
+            <div class="tiles-container-inner">
+            <% 1.upto(3).each do |number| %>
+              <%= image_tag "instructor_tiles/tile_#{number}.jpg", class: 'img-responsive' %>
+            <% end %>
+            </div>
+            </div>
+          </div>
+
         </div>
         <!-- END content -->
 
@@ -74,44 +83,68 @@ description: >
   <div class="outer">
     <div class="middle">
       <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row">
 
-        <!-- begin content -->
-        <div class="col-sm-4 col-sm-offset-2">
-          <h2>
-            Guarantee of only the best ski and snowboard instructors
-          </h2>
+            <!-- begin content -->
+            <div class="col-md-5">
+              <h2>
+                Guarantee of only the best ski and snowboard instructors
+              </h2>
+              <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nunc mollis tortor sed sapien rhoncus tincidunt.<br />
+              Fusce augue mi, scelerisque vel gravida eget, venenatis sit amet dolor. Praesent dignissim vitae ligula sed suscipit. Integer tempor egestas neque, nec pretium dui eleifend vitae.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <%= image_tag 'instructor_screening.png', class: 'img-responsive' %>
+            </div>
+            <!-- end content -->
+
+          </div>
         </div>
-        <div class="col-sm-4 ">
-          <p>hello</p>
-        </div>
-        <!-- end content -->
       </div>
     </div>
   </div>
 </section>
 
-<section class="container-fluid feature">
+<section id="guarantees" class="container-fluid feature">
   <div class="outer">
     <div class="middle">
       <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row">
 
         <!-- begin content -->
-        <div class="col-sm-2 col-sm-offset-3">
-          <h3>
-            Safe
-          </h3>
+        <div class="col-md-4">
+          <%= image_tag 'pound_icon.png', class: 'img-responsive' %>
+          <h3>Value</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc mollis tortor sed sapien rhoncus tincidunt.<br />
+          </p>
         </div>
-        <div class="col-sm-2">
-          <h3>
-            Reliable
-          </h3>
+        <div class="col-md-4">
+          <%= image_tag 'shake_icon.png', class: 'img-responsive' %>
+          <h3>Reliable</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc mollis tortor sed sapien rhoncus tincidunt.<br />
+          </p>
         </div>
-        <div class="col-sm-2">
-          <h3>
-            Performant
-          </h3>
+        <div class="col-md-4">
+          <%= image_tag 'safe_icon.png', class: 'img-responsive' %>
+          <h3>Safe</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc mollis tortor sed sapien rhoncus tincidunt.<br />
+          </p>
         </div>
         <!-- end content -->
+
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,47 +1,15 @@
 @import "variables";
 
-#landing {
-  background-image: url("<%= image_path('landing.jpg') %>");
-  background-size: cover;
-  background-position: center;
+/*
+ * REMEMBER: mobile first development
+ * All styles are defined for mobile first, then desktop
+ * The md bkp is the desktop size
+ */
 
-  padding-right: 30px;
-  padding-left: 30px;
-
-  #hero {
-    margin-top: -20px;
-
-    h1, h2 {
-      color: #FFF;
-      text-align: center;
-      margin-bottom: 0px;
-    }
-
-    h1 {
-      font-size: 50px;
-      font-weight: 700;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-      margin-top: 0px;
-    }
-
-    h2 {
-      font-weight: 500;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5), -2px 0px 2px rgba(0, 0, 0, 0.5);
-      max-width: 500px;
-      margin-top: 50px;
-      // Align horizontally center
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-  }
-}
-
-.container-fluid {
-  border-bottom: 1px solid $bright-blue;
-  box-sizing: content-box;
-}
-
+/*
+ * #schuuss on body element
+ * Styles global to the site
+ */
 #schuuss {
   form {
     margin-top: 50px;
@@ -90,36 +58,144 @@
   }
 }
 
-#screening {
-  background: #F0F6FF;
+#landing {
+  height: 100%;
+  min-height: 500px;
+
+  background-image: url("<%= image_path('groomed_trail_with_skier.jpg') %>");
+  background-size: cover;
+  background-position: center;
+
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+  #hero {
+    margin-top: -20px;
+
+    h1, h2 {
+      color: #FFF;
+      text-align: center;
+      margin-bottom: 0px;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-weight: 700;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      margin-top: 0px;
+    }
+
+    h2 {
+      font-weight: 500;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5), -2px 0px 2px rgba(0, 0, 0, 0.5);
+      max-width: 500px;
+      margin-top: 50px;
+      // Align horizontally center
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
 }
+
+.container-fluid {
+  border-bottom: 1px solid $bright-blue;
+  box-sizing: content-box;
+}
+
 
 section.feature {
 
-
   // Additional side padding on mobile
-  padding-left: 25px;
-  padding-right: 25px;
+  /* padding-left: 25px; */
+  /* padding-right: 25px; */
 
-  @media (min-width: $md-min) {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-
-
-  h1, h2 {
-    text-align: center;
-
-    @media (min-width: $sm-min) {
-      text-align: left;
-    }
-  }
+  /* padding-top: 40px; */
+  /* padding-bottom: 40px; */
+  padding: 60px 25px;
 
   h2 {
     max-width: 500px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+
+    margin: 10px auto;
+
+    @media (min-width: $md-min) {
+      text-align: left;
+      max-width: none;
+    }
+
   }
 
+  p {
+    max-width: 700px;
+    font-size: 17px;
+    text-align: center;
+
+    margin: 20px auto;
+
+    @media (min-width: $md-min) {
+      text-align: left;
+      max-width: none;
+    }
+  }
+
+  h3 {
+    text-align: center;
+
+  }
+
+}
+
+#select-instructor {
+  height: initial;
+  @media (min-width: $md-min) {
+    height: 100%;
+  }
+
+  .tiles-overflow {
+    overflow-x: scroll;
+  }
+
+  .tiles-container-outer {
+    height: 338px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    .tiles-container-inner {
+      width: 3 * 205px;
+      position: absolute;
+
+      img {
+        max-width: 200px;
+        max-height: 337px;
+        display: inline;
+      }
+    }
+  }
+}
+
+#screening {
+  background: #F0F6FF;
+  img {
+
+    margin: auto;
+  }
+}
+
+
+#guarantees {
+  img {
+    max-height: 130px;
+    margin: auto;
+  }
+
+  // Styles to apply from medium bkp
+  @media (min-width: $md-min) {
+    height: 100%;
+    text-align: left;
+    max-width: none;
+  }
 }
