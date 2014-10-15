@@ -1,0 +1,23 @@
+@import "variables";
+
+#schuuss {
+  .navbar.navbar-default {
+    background: none;
+    border: none;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+
+    .navbar-nav {
+
+
+      a {
+        color: $bright-blue;
+        border: 1px solid $bright-blue;
+        border-radius: 4px;
+      }
+
+    }
+  }
+}
