@@ -1,6 +1,7 @@
 @import "variables";
 
 #landing {
+  min-height: 500px;
   background-image: url("<%= image_path('landing.jpg') %>");
   background-size: cover;
   background-position: center;
@@ -90,8 +91,18 @@
   }
 }
 
+#pick {
+  height: initial;
+  @media (min-width: $md-min) {
+    height: 100%;
+  }
+}
 #screening {
   background: #F0F6FF;
+  img {
+
+    margin: auto;
+  }
 }
 
 section.feature {
@@ -101,25 +112,47 @@ section.feature {
   padding-left: 25px;
   padding-right: 25px;
 
-  @media (min-width: $md-min) {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
+  padding-top: 25px;
+  padding-bottom: 25px;
 
-
-  h1, h2 {
-    text-align: center;
-
-    @media (min-width: $sm-min) {
-      text-align: left;
-    }
-  }
 
   h2 {
     max-width: 500px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+
+    margin: 10px auto;
+
+    @media (min-width: $md-min) {
+      text-align: left;
+      max-width: none;
+    }
+
   }
 
+  p {
+    max-width: 700px;
+    font-size: 17px;
+    text-align: center;
+
+    margin: 20px auto;
+
+    @media (min-width: $md-min) {
+      text-align: left;
+      max-width: none;
+    }
+  }
+
+  h3 {
+    text-align: center;
+
+  }
+
+}
+
+#guarantees {
+
+  img {
+    max-height: 160px;
+    margin: auto;
+  }
 }
